@@ -34,28 +34,6 @@ mongo_name = ['Australia', 'Bahrain', 'Brazil', 'Brunei', 'Cambodia','Canada', '
 
 region = call_data
 
-
-import requests
-
-import streamlit as st
-from streamlit_lottie import st_lottie
-from streamlit_lottie import st_lottie_spinner
-
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
-lottie_url_hello = "https://assets5.lottiefiles.com/packages/lf20_V9t630.json"
-lottie_url_download = "https://assets4.lottiefiles.com/private_files/lf30_t26law.json"
-lottie_hello = load_lottieurl(lottie_url_hello)
-lottie_download = load_lottieurl(lottie_url_download)
-
-
-st_lottie(lottie_hello, key="hello")
-
 st.title('🔥 일상에 찌든 당신 떠나조 🔥')
 st.markdown('#### 여행에 필요한 정보(환율, 항공권 가격, 물가, 날씨)를 제공하는 서비스입니다.')
 
